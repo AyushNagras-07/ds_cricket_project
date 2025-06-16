@@ -75,13 +75,13 @@ Strike Rate: 135
 Predicted Runs: 33.8
 
 #📊 Prediction Error Distribution  
-![Prediction Error](images/prediction_error.png)
+![Prediction Error](https://github.com/AyushNagras-07/ds_cricket_project/blob/master/outputs/Prediction_error_distributon.png)
 
 # 🥧 Dismissal Type Distribution  
-![Dismissals](images/dismissal_types.png)
+![Dismissals](https://github.com/AyushNagras-07/ds_cricket_project/blob/master/outputs/Dismissal_Type.png)
 
 # 📍 Top Locations by Average Runs  
-![Top Locations](images/top_locations.png)
+![Top Locations](https://github.com/AyushNagras-07/ds_cricket_project/blob/master/outputs/ANALYSIS_RESULT.png)
 ## How to run local
 
 How to Run Locally
