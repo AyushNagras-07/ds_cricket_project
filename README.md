@@ -74,7 +74,7 @@ Strike Rate: 135
 # Example Output from the model:
 Predicted Runs: 33.8
 
-#📊 Prediction Error Distribution  
+# 📊 Prediction Error Distribution  
 ![Prediction Error](https://github.com/AyushNagras-07/ds_cricket_project/blob/master/outputs/Prediction_error_distributon.png)
 
 # 🥧 Dismissal Type Distribution  
