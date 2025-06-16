@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cricket Run Predictor</title>
+</head>
+<body>
+    <h2>Enter Match Stats to Predict Runs</h2>
+    <form action="/predict" method="post">
+        <label>Balls Faced:</label><br>
+        <input type="text" name="balls_faced"><br>
+        <label>Fours:</label><br>
+        <input type="text" name="fours"><br>
+        <label>Sixes:</label><br>
+        <input type="text" name="sixes"><br>
+        <label>Strike Rate:</label><br>
+        <input type="text" name="strike_rate"><br>
+        <label>Batting Position:</label><br>
+        <input type="text" name="batting_position"><br>
+        <label>Innings:</label><br>
+        <input type="text" name="innings"><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
