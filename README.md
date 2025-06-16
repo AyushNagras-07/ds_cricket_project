@@ -73,6 +73,15 @@ Strike Rate: 135
 
 # Example Output from the model:
 Predicted Runs: 33.8
+
+#📊 Prediction Error Distribution  
+![Prediction Error](images/prediction_error.png)
+
+# 🥧 Dismissal Type Distribution  
+![Dismissals](images/dismissal_types.png)
+
+# 📍 Top Locations by Average Runs  
+![Top Locations](images/top_locations.png)
 ## How to run local
 
 How to Run Locally
@@ -107,3 +116,4 @@ References:
 scikit-learn Official Documentation
 Flask Official Documentation
 Inspiration for data engineering and project design from various cricket statistics analysis resources.
+https://youtube.com/playlist?list=PL2zq7klxX5ASFejJj80ob9ZAnBHdz5O1t&si=uFiz64xstDk8wsYw
