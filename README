@@ -1,3 +1,150 @@
-#ds_cricket_project
+# 🏏 Cricket Player Run Predictor
 
-#resource https://www.kaggle.com/code/rahulriot/cricbuzz-web-scraping
+A machine learning project that predicts the number of runs a batsman is likely to score in a cricket match, based on their performance metrics like rating, balls faced, and strike rate. This tool helps simulate match scenarios and evaluate player impact using data science.
+
+---
+
+## 📌 Project Features
+
+- Predicts expected **runs scored** by a player using historical features.
+- Implements and compares multiple regression models (Linear, Lasso, Random Forest).
+- Performs data cleaning, feature engineering, and EDA.
+- Built with a **Flask web app** that allows real-time predictions via a simple browser interface.
+- Uses `pickle` to serialize and load the trained ML model.
+
+---
+
+## 🧰 Tech Stack & Libraries
+
+- **Language**: Python 3.8+
+- **IDE**: Jupyter Notebook + VSCode
+- **Libraries**:
+  - `pandas`, `numpy`
+  - `scikit-learn`
+  - `matplotlib`, `seaborn`
+  - `flask`, `pickle`
+- **Tools**:
+  - `Jupyter Notebook` for model building
+  - `Flask` for web deployment
+
+---
+
+## 📁 Project Structure
+
+ds_cricket_project/
+│
+├── data/
+│ └── final_data.csv # Cleaned dataset used for training
+│
+├── model/
+│ └── model_file.p # Serialized Random Forest model
+│
+├── notebooks/
+│ └── model_training.ipynb # All EDA, preprocessing, model training
+│
+├── FlaskAPI/
+│ ├── app.py # Flask web app code
+│ └── templates/
+│ └── home.html # HTML page for input form
+│
+├── requirements.txt # Project dependencies
+└── README.md # Project documentation
+
+
+---
+
+## 📊 Dataset Description
+
+Manually created and cleaned cricket dataset including the following features:
+
+- `Rating`: Player rating
+- `Balls Faced`: Number of balls faced by the player
+- `SR` (Strike Rate): Player's strike rate
+- `Runs`: Target variable to predict
+
+---
+
+## 🔍 Model Building & Performance
+
+### Algorithms Used:
+- **Linear Regression** – Baseline model  
+- **Lasso Regression** – L1-regularized for sparse data  
+- **Random Forest Regressor** – Best performing model  
+
+### Performance (Mean Absolute Error):
+- Random Forest: **8.21**
+- Linear Regression: 10.55
+- Lasso Regression: 9.89
+
+---
+
+## 🧪 EDA Highlights
+
+- Positive correlation between rating, strike rate and predicted runs.
+- Visualized trends using scatter plots and heatmaps.
+- Found that rating and strike rate were the strongest predictors.
+
+---
+
+## 🚀 Deployment (Flask Web App)
+
+### How It Works:
+
+1. User enters:
+   - Player Rating
+   - Balls Faced
+   - Strike Rate
+2. The model returns a predicted run value.
+
+### Example Input:
+Rating: 4.2
+Balls Faced: 28
+Strike Rate: 135
+
+shell
+Copy
+Edit
+
+### Example Output:
+Predicted Runs: 33.8
+
+yaml
+Copy
+Edit
+
+---
+
+## ⚙️ How to Run Locally
+
+```bash
+# Step 1: Clone the repo
+git clone https://github.com/AyushNagras-07/ds_cricket_project.git
+cd ds_cricket_project
+
+# Step 2: Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate        # Windows: venv\Scripts\activate
+
+# Step 3: Install dependencies
+pip install -r requirements.txt
+
+# Step 4: Run the Flask app
+cd FlaskAPI
+python app.py
+Visit the web app in your browser:
+👉 http://127.0.0.1:5000/
+
+🙌 Acknowledgements
+Inspired by real-world cricket analytics and machine learning deployment practices.
+References:
+
+sklearn Documentation
+
+Flask Documentation
+
+Manual data engineering and project inspiration from cricket stats analysis.
+
+📬 Contact
+Author: Ayush Nagras
+GitHub: AyushNagras-07
+Feel free to fork the repo, open issues, or reach out for collaborations!
